@@ -15,7 +15,8 @@ env:
 jobs:
   podman-pull:
     name: Log in and pull image with Podman
-    runs-on: ubuntu-20.04
+    # runs-on: ubuntu-20.04
+    runs-on: self-hosted
     strategy:
       fail-fast: false
       matrix:
