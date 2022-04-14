@@ -37,7 +37,7 @@ async function run(): Promise<void> {
 
     stateHelper.setRegistry(registry);
     stateHelper.setLogout(logout);
-    await execute(await getPodmanPath(), [ "login", "--help" ]);
+    // await execute(await getPodmanPath(), [ "login", "--help" ]);
     const args = [
         "login",
         registry,
@@ -45,6 +45,7 @@ async function run(): Promise<void> {
         username,
         "-p",
         password,
+        "-v",
     ];
     await execute(await getPodmanPath(), args);
     core.info(`✅ Successfully logged in to ${registry} as ${username}`);
