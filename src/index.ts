@@ -37,7 +37,7 @@ async function run(): Promise<void> {
 
     stateHelper.setRegistry(registry);
     stateHelper.setLogout(logout);
-
+    await execute(await getPodmanPath(), [ "login", "--help" ]);
     const args = [
         "login",
         registry,
